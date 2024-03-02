@@ -10,7 +10,8 @@ public class CurrentAdaptee implements UniversalAdaptee{
 
     @Override
     public void getRequiredCurrent(){
-        currentConfiguration.setOutput("USA Baby!");
+        // there might be some changes to the current configuration object here too
+        currentConfiguration.setOutput("Some  current");
         System.out.println("Here's the output voltage you need!");
     }
 }

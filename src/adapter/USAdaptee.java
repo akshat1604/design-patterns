@@ -1,6 +1,11 @@
 package adapter;
 
-public class USAdaptee implements UniversalOutputAdaptee {
+public class USAdaptee implements UniversalAdaptee {
+
+    private CurrentConfiguration currentConfiguration;
+    public USAdaptee(CurrentConfiguration currentConfiguration) {
+        this.currentConfiguration = currentConfiguration;
+    }
 
     public String getName() {
         return name;
@@ -12,9 +17,12 @@ public class USAdaptee implements UniversalOutputAdaptee {
 
     private String name;
 
-    @Override
-    public void generateCurrent(){
 
+
+    @Override
+    public void getRequiredCurrent() {
+        currentConfiguration.setOutput("USA Baby!");
+        System.out.println("Here's the output voltage you need!");
     }
 }
 /*
